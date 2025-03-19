@@ -33,7 +33,7 @@ Hacemos los dos test Unitarios y utilizamos test parametrizados (Utilizando el m
 
 Aqui el ejemplo:
 
-BIEN
+**BIEN**
 ```
 @ParameterizedTest
 @CsvSource({
@@ -41,7 +41,7 @@ BIEN
     "12345678, Z",
     "87654321, X"
 ```
-MAL
+**MAL**
 ````
 @ParameterizedTest
 @CsvSource({
@@ -62,37 +62,19 @@ Si no hay una validación de longitud del DNI antes de ejecutarlo, los test debe
 
 ````
 @ParameterizedTest
-    @CsvSource({
-        "'', 'A'",       // Vacío
-        "'123', 'B'",    // Menos de 8 caracteres
-        "'123456789', 'C'", // Más de 8 caracteres
-        "'12A45678', 'D'"  // Caracteres no numéricos
-        })
-    void testDniInvalido(String dni, char letra) {
-    assertThrows(NumberFormatException.class, () -> {
-    Main.calcularLetraDNI(dni);
-});
-}
-````
-
-
-// Si no hubiera una comprobación previamente encuanto a la longitud de la string del DNI, ¿Qué hay que cambiar
-// en los tests para que comprueben estos casos?
-//Si no hay una validación de longitud del DNI antes de ejecutarlo, los test deben considerar estos casos:
-//@ParameterizedTest
-/** @CsvSource({
-"'', 'A'",       // Vacío
-"'123', 'B'",    // Menos de 8 caracteres
-"'123456789', 'C'", // Más de 8 caracteres
-"'12A45678', 'D'"  // Caracteres no numéricos
-})
+@CsvSource({
+    "'', 'A'",       // Vacío
+    "'123', 'B'",    // Menos de 8 caracteres
+    "'123456789', 'C'", // Más de 8 caracteres
+    "'12A45678', 'D'"  // Caracteres no numéricos
+    })
 void testDniInvalido(String dni, char letra) {
 assertThrows(NumberFormatException.class, () -> {
 Main.calcularLetraDNI(dni);
 });
 }
-**/
-// Con esto, verificamos que el código maneje correctamente errores de longitud y formato.
+````
+Con esto, verificamos que el código maneje correctamente errores de longitud y formato.
 
 
 
