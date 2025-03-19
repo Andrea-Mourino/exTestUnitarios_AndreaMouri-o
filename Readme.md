@@ -25,7 +25,7 @@ Empezamos haciendo un fork al repositorio del profesor y luego un clone para ir 
 
 ### Segundo Paso
 
-Creamos el test que en este caso lo hice creando un *Directory* y luego con ese directorio creado darle click derecho y darle *Mark Directory Ass* y seleccionar Test. Otra forma de hacer los test es darle click derecho a la funcion que queremos hacerle test y darle a *Generate* y luego a Test, creandote automaticamente el test
+Creamos el test que en este caso lo hice creando un *Directory* y luego con ese directorio creado darle click derecho y darle *Mark Directory Ass* y seleccionar Test. Otra forma de hacer los test es darle click derecho al método que queremos hacerle test y darle a *Generate* y luego a Test, creandote automaticamente el test
 
 ### Tercer Paso
 
