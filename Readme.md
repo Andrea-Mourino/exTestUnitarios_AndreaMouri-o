@@ -69,9 +69,9 @@ Si no hay una validación de longitud del DNI antes de ejecutarlo, los test debe
     "'12A45678', 'D'"  // Caracteres no numéricos
     })
 void testDniInvalido(String dni, char letra) {
-assertThrows(NumberFormatException.class, () -> {
-Main.calcularLetraDNI(dni);
-});
+    assertThrows(NumberFormatException.class, () -> {
+        Main.calcularLetraDNI(dni);
+    });
 }
 ````
 Con esto, verificamos que el código maneje correctamente errores de longitud y formato.
